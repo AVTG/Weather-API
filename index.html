@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./stye.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
+
+    <link rel="shortcut icon" href="./assets/cloud.png" type="image/x-icon">
+
+    <title>Weather</title>
+  </head>
+  <body>
+    <!-- wrapper /-->
+    <div class="wrapper">
+        <div class="container">
+        <h1 class="weather-title">Weather App</h1>
+
+        <!-- tab container -->
+        <div class="tab-container">
+          <div class="option-button" data-yourWeather>Your Weather</div>
+
+          <div class="option-button" data-customWeather>Search Weather</div>
+        </div>
+
+        <!-- Location permission wrapper -->
+        <div data-accessContainer class="grant-access-container">
+            <img src="./assets/location.png" alt="" height="100" width="100">
+            <h1>Grant Location Access</h1>
+            <p>Allow Access To Get Information</p>
+
+            <!-- Grant Access Button -->
+            <button data-grantAccess>
+                Grant Access
+            </button>
+
+        </div>
+
+        <!-- search form  -->
+        <form data-searchForm class="search-form">
+            <input type="text" data-searchInput placeholder="Search for City">
+            <button type="submit">
+                <img src="./assets/search.svg" alt="">
+            </form>
+        </div>
+
+        <!-- loading screen container -->
+        <div data-loadingScreen class="loading-container">
+            <img src="./assets/loading.gif" alt="" height="400" width="400">
+            <p>Loading</p>
+        </div>
+
+        <!-- show weather Information -->
+        <div  data-weatherInfoDisplay class="show-Weather">
+            <!-- city name -->
+            <div class="location-details">
+                <p data-cityName></p>
+                <img data-countryIcon src="" class="flag-icon">
+            </div>
+
+
+            <!-- weather description -->
+            <p data-weatherDescription></p>
+            <!-- weather icon -->
+            <img data-weatherIcon>
+            <!-- temprature -->
+            <p data-temp class="temprature-text"></p>
+
+
+
+            <!-- 3 cards container -->
+            <div class="card-container">
+                <!-- card 1 -->
+                <div class="card">
+                    <img src="./assets/wind.png" alt="">
+                    <p>WINDSPEED</p>
+                    <p data-windSpeed></p>
+
+                </div>
+
+                
+                <!-- card 2 -->
+                <div class="card">
+                    <img src="./assets/humidity.png" alt="">
+                    <p>HUMIDITY</p>
+                    <p data-humidity></p>
+
+                </div>
+
+                <!-- card 3 -->
+                <div class="card">
+                    <img src="./assets/cloud.png" alt="">
+                    <p>CLOUD</p>
+                    <p data-cloudiness></p>
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <script>
+      feather.replace();
+    </script>
+    <script src="./script.js"></script>
+  </body>
+</html>
